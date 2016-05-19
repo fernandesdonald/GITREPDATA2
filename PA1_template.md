@@ -44,8 +44,8 @@ mean_step_count 	<- as.character(round(mean(activity_date$steps), digits = 0))
 median_step_count 	<- as.character(round(median(activity_date$steps), digits = 0))
 ```
 ##Conclusion#1: 
-##Mean of (Total Step Count/Day): 10766
-##Median of (Total Step Count/Day): 10765
+###Mean of (Total Step Count/Day): 10766
+###Median of (Total Step Count/Day): 10765
 
 
 
@@ -70,9 +70,12 @@ abline(v = activity_int_avg$interval[which.max(activity_int_avg$steps)], col="bl
 
 ```r
 max_avg_steps	    <- as.character(max(activity_int_avg$steps))
+avg_avg_steps	    <- as.character(round(mean(activity_int_avg$steps)))
 ```
 ##Conclusion#2: 
-##835 Interval of Day (HHMM), as indicated by the vertical dotted black line above, identifies the Interval which has the Maximum Step Count averaged on a Daily basis.
+###206 represents the overall Maximum (Step Count by Interval)
+###37 represents the overall Mean (Step Count by Interval).
+###835 Interval of Day (HHMM), as indicated by the vertical dotted black line above, identifies the Interval which has the Maximum Step Count averaged on a Daily basis.
 
 ******************************************************************
 ******************************************************************
@@ -109,9 +112,10 @@ mean_step_count_fill 		<- as.character(round(mean(activity_date_fill$steps)))
 median_step_count_fill 		<- as.character(median(activity_date_fill$steps))
 ```
 ##Conclusion#3: 
-##Mean of (Total Step Count per Day): 10750
-##Median of (Total Step Count per Day): 10641
-##Mean and Median of (Total Step Count per Day) has slightly decreased after filling up missing(NA) values in the steps column. Strategy to fill up NA values in the "steps" column: Average value of this variable from another matching non-NA interval was used to fill up the NA value. This gives a more accurate result.
+###Strategy to fill up NA values in the "steps" column: Average value of this variable from another matching non-NA interval was used to fill up the NA value. This gives a more accurate result.
+###Mean of (Total Step Count per Day): 10750
+###Median of (Total Step Count per Day): 10641
+###Mean and Median of (Total Step Count per Day) has slightly decreased after filling up missing(NA) values in the steps column. 
 
 ******************************************************************
 ******************************************************************
@@ -142,10 +146,10 @@ activity_int_max_fill_weekend <- max(subset(activity_int_avg_fill,isweekend==TRU
 activity_int_max_fill_weekday <- max(subset(activity_int_avg_fill,isweekend==FALSE)$steps)
 ```
 ##Conclusion#4:
-##Average of (Step Count per Interval) on Weekday (35.125), is less than that  on Weekend (41.9375).
-##Max (Step Count per Interval) on Weekday (230), is more than that on Weekend (166).
-##Activity time period starts at around 500 on Weekdays and Weekends.
-##Activity time period ends slightly later on Weekdays, compared to Weekends.
+###Average of (Step Count per Interval) on Weekday (35.125), is less than that  on Weekend (41.9375).
+###Max (Step Count per Interval) on Weekday (230), is more than that on Weekend (166).
+###Activity time period starts at around 500 (HHMM) on Weekdays and Weekends.
+###Activity time period ends slightly later on Weekdays, compared to Weekends.
 
 ******************************************************************
 ******************************************************************

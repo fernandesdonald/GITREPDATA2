@@ -42,8 +42,8 @@ mean_step_count 	<- as.character(round(mean(activity_date$steps), digits = 0))
 median_step_count 	<- as.character(round(median(activity_date$steps), digits = 0))
 ```
 ##Conclusion#1: 
-##Mean of (Total Step Count/Day): `r mean_step_count`
-##Median of (Total Step Count/Day): `r median_step_count`
+###Mean of (Total Step Count/Day): `r mean_step_count`
+###Median of (Total Step Count/Day): `r median_step_count`
 
 
 
@@ -62,9 +62,12 @@ with(activity_int_avg,plot(interval, steps, main="Daily Average Step Count by Ti
 max_interval 	    <- as.character(activity_int_avg$interval[which.max(activity_int_avg$steps)])
 abline(v = activity_int_avg$interval[which.max(activity_int_avg$steps)], col="black", lwd=3, lty=2)
 max_avg_steps	    <- as.character(max(activity_int_avg$steps))
+avg_avg_steps	    <- as.character(round(mean(activity_int_avg$steps)))
 ```
 ##Conclusion#2: 
-##`r max_interval` Interval of Day (HHMM), as indicated by the vertical dotted black line above, identifies the Interval which has the Maximum Step Count averaged on a Daily basis.
+###`r max_avg_steps` represents the overall Maximum (Step Count by Interval)
+###`r avg_avg_steps` represents the overall Mean (Step Count by Interval).
+###`r max_interval` Interval of Day (HHMM), as indicated by the vertical dotted black line above, identifies the Interval which has the Maximum Step Count averaged on a Daily basis.
 
 ******************************************************************
 ******************************************************************
@@ -96,9 +99,10 @@ mean_step_count_fill 		<- as.character(round(mean(activity_date_fill$steps)))
 median_step_count_fill 		<- as.character(median(activity_date_fill$steps))
 ```
 ##Conclusion#3: 
-##Mean of (Total Step Count per Day): `r mean_step_count_fill`
-##Median of (Total Step Count per Day): `r median_step_count_fill`
-##Mean and Median of (Total Step Count per Day) has slightly decreased after filling up missing(NA) values in the steps column. Strategy to fill up NA values in the "steps" column: Average value of this variable from another matching non-NA interval was used to fill up the NA value. This gives a more accurate result.
+###Strategy to fill up NA values in the "steps" column: Average value of this variable from another matching non-NA interval was used to fill up the NA value. This gives a more accurate result.
+###Mean of (Total Step Count per Day): `r mean_step_count_fill`
+###Median of (Total Step Count per Day): `r median_step_count_fill`
+###Mean and Median of (Total Step Count per Day) has slightly decreased after filling up missing(NA) values in the steps column. 
 
 ******************************************************************
 ******************************************************************
@@ -125,10 +129,10 @@ activity_int_max_fill_weekday <- max(subset(activity_int_avg_fill,isweekend==FAL
 
 ```
 ##Conclusion#4:
-##Average of (Step Count per Interval) on Weekday (`r activity_int_avg_fill_weekday`), is less than that  on Weekend (`r activity_int_avg_fill_weekend`).
-##Max (Step Count per Interval) on Weekday (`r activity_int_max_fill_weekday`), is more than that on Weekend (`r activity_int_max_fill_weekend`).
-##Activity time period starts at around 500 on Weekdays and Weekends.
-##Activity time period ends slightly later on Weekdays, compared to Weekends.
+###Average of (Step Count per Interval) on Weekday (`r activity_int_avg_fill_weekday`), is less than that  on Weekend (`r activity_int_avg_fill_weekend`).
+###Max (Step Count per Interval) on Weekday (`r activity_int_max_fill_weekday`), is more than that on Weekend (`r activity_int_max_fill_weekend`).
+###Activity time period starts at around 500 (HHMM) on Weekdays and Weekends.
+###Activity time period ends slightly later on Weekdays, compared to Weekends.
 
 ******************************************************************
 ******************************************************************

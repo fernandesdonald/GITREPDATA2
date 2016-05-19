@@ -154,17 +154,17 @@ median_step_count   &lt;- as.character(round(median(activity_date$steps), digits
 </div>
 <div id="conclusion1" class="section level2">
 <h2>Conclusion#1:</h2>
+<div id="mean-of-total-step-countday-10766" class="section level3">
+<h3>Mean of (Total Step Count/Day): 10766</h3>
 </div>
-<div id="mean-of-total-step-countday-10766" class="section level2">
-<h2>Mean of (Total Step Count/Day): 10766</h2>
+<div id="median-of-total-step-countday-10765" class="section level3">
+<h3>Median of (Total Step Count/Day): 10765</h3>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
 </div>
-<div id="median-of-total-step-countday-10765" class="section level2">
-<h2>Median of (Total Step Count/Day): 10765</h2>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
 </div>
 <div id="question2" class="section level2">
 <h2>Question#2:</h2>
@@ -180,18 +180,25 @@ with(activity_int_avg,plot(interval, steps, main=&quot;Daily Average Step Count 
 max_interval        &lt;- as.character(activity_int_avg$interval[which.max(activity_int_avg$steps)])
 abline(v = activity_int_avg$interval[which.max(activity_int_avg$steps)], col=&quot;black&quot;, lwd=3, lty=2)</code></pre>
 <p><img src="data:image/png;base64,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" alt /><!-- --></p>
-<pre class="r"><code>max_avg_steps       &lt;- as.character(max(activity_int_avg$steps))</code></pre>
+<pre class="r"><code>max_avg_steps       &lt;- as.character(max(activity_int_avg$steps))
+avg_avg_steps       &lt;- as.character(round(mean(activity_int_avg$steps)))</code></pre>
 </div>
 <div id="conclusion2" class="section level2">
 <h2>Conclusion#2:</h2>
+<div id="represents-the-overall-maximum-step-count-by-interval" class="section level3">
+<h3>206 represents the overall Maximum (Step Count by Interval)</h3>
 </div>
-<div id="interval-of-day-hhmm-as-indicated-by-the-vertical-dotted-black-line-above-identifies-the-interval-which-has-the-maximum-step-count-averaged-on-a-daily-basis." class="section level2">
-<h2>835 Interval of Day (HHMM), as indicated by the vertical dotted black line above, identifies the Interval which has the Maximum Step Count averaged on a Daily basis.</h2>
+<div id="represents-the-overall-mean-step-count-by-interval." class="section level3">
+<h3>37 represents the overall Mean (Step Count by Interval).</h3>
+</div>
+<div id="interval-of-day-hhmm-as-indicated-by-the-vertical-dotted-black-line-above-identifies-the-interval-which-has-the-maximum-step-count-averaged-on-a-daily-basis." class="section level3">
+<h3>835 Interval of Day (HHMM), as indicated by the vertical dotted black line above, identifies the Interval which has the Maximum Step Count averaged on a Daily basis.</h3>
 <hr />
 <hr />
 <hr />
 <hr />
 <hr />
+</div>
 </div>
 <div id="question3" class="section level2">
 <h2>Question#3:</h2>
@@ -223,20 +230,23 @@ median_step_count_fill      &lt;- as.character(median(activity_date_fill$steps))
 </div>
 <div id="conclusion3" class="section level2">
 <h2>Conclusion#3:</h2>
+<div id="strategy-to-fill-up-na-values-in-the-steps-column-average-value-of-this-variable-from-another-matching-non-na-interval-was-used-to-fill-up-the-na-value.-this-gives-a-more-accurate-result." class="section level3">
+<h3>Strategy to fill up NA values in the “steps” column: Average value of this variable from another matching non-NA interval was used to fill up the NA value. This gives a more accurate result.</h3>
 </div>
-<div id="mean-of-total-step-count-per-day-10750" class="section level2">
-<h2>Mean of (Total Step Count per Day): 10750</h2>
+<div id="mean-of-total-step-count-per-day-10750" class="section level3">
+<h3>Mean of (Total Step Count per Day): 10750</h3>
 </div>
-<div id="median-of-total-step-count-per-day-10641" class="section level2">
-<h2>Median of (Total Step Count per Day): 10641</h2>
+<div id="median-of-total-step-count-per-day-10641" class="section level3">
+<h3>Median of (Total Step Count per Day): 10641</h3>
 </div>
-<div id="mean-and-median-of-total-step-count-per-day-has-slightly-decreased-after-filling-up-missingna-values-in-the-steps-column.-strategy-to-fill-up-na-values-in-the-steps-column-average-value-of-this-variable-from-another-matching-non-na-interval-was-used-to-fill-up-the-na-value.-this-gives-a-more-accurate-result." class="section level2">
-<h2>Mean and Median of (Total Step Count per Day) has slightly decreased after filling up missing(NA) values in the steps column. Strategy to fill up NA values in the “steps” column: Average value of this variable from another matching non-NA interval was used to fill up the NA value. This gives a more accurate result.</h2>
+<div id="mean-and-median-of-total-step-count-per-day-has-slightly-decreased-after-filling-up-missingna-values-in-the-steps-column." class="section level3">
+<h3>Mean and Median of (Total Step Count per Day) has slightly decreased after filling up missing(NA) values in the steps column.</h3>
 <hr />
 <hr />
 <hr />
 <hr />
 <hr />
+</div>
 </div>
 <div id="question4" class="section level2">
 <h2>Question#4:</h2>
@@ -262,23 +272,23 @@ activity_int_max_fill_weekday &lt;- max(subset(activity_int_avg_fill,isweekend==
 </div>
 <div id="conclusion4" class="section level2">
 <h2>Conclusion#4:</h2>
+<div id="average-of-step-count-per-interval-on-weekday-35.125-is-less-than-that-on-weekend-41.9375." class="section level3">
+<h3>Average of (Step Count per Interval) on Weekday (35.125), is less than that on Weekend (41.9375).</h3>
 </div>
-<div id="average-of-step-count-per-interval-on-weekday-35.125-is-less-than-that-on-weekend-41.9375." class="section level2">
-<h2>Average of (Step Count per Interval) on Weekday (35.125), is less than that on Weekend (41.9375).</h2>
+<div id="max-step-count-per-interval-on-weekday-230-is-more-than-that-on-weekend-166." class="section level3">
+<h3>Max (Step Count per Interval) on Weekday (230), is more than that on Weekend (166).</h3>
 </div>
-<div id="max-step-count-per-interval-on-weekday-230-is-more-than-that-on-weekend-166." class="section level2">
-<h2>Max (Step Count per Interval) on Weekday (230), is more than that on Weekend (166).</h2>
+<div id="activity-time-period-starts-at-around-500-hhmm-on-weekdays-and-weekends." class="section level3">
+<h3>Activity time period starts at around 500 (HHMM) on Weekdays and Weekends.</h3>
 </div>
-<div id="activity-time-period-starts-at-around-500-on-weekdays-and-weekends." class="section level2">
-<h2>Activity time period starts at around 500 on Weekdays and Weekends.</h2>
+<div id="activity-time-period-ends-slightly-later-on-weekdays-compared-to-weekends." class="section level3">
+<h3>Activity time period ends slightly later on Weekdays, compared to Weekends.</h3>
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
 </div>
-<div id="activity-time-period-ends-slightly-later-on-weekdays-compared-to-weekends." class="section level2">
-<h2>Activity time period ends slightly later on Weekdays, compared to Weekends.</h2>
-<hr />
-<hr />
-<hr />
-<hr />
-<hr />
 </div>
 
 
